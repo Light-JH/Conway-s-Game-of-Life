@@ -7,6 +7,7 @@ function CreateMatrix(rows: number, columns: number): number[][] {
     return matrix;
 }
 
+
 const rows: number = parseInt(process.argv[2], 10);
 const columns: number = parseInt(process.argv[3], 10);
 
@@ -15,4 +16,14 @@ if (isNaN(rows) || isNaN(columns)) {
     process.exit(1);
 }
 
-console.log(CreateMatrix(rows, columns));
+let matrix = CreateMatrix(rows, columns);
+
+// print matrix.
+
+function printMatrix(matrix: number[][]): void {
+    for (const row of matrix) {
+        console.log(row.join('\t'))
+    }
+}
+
+printMatrix(matrix);
