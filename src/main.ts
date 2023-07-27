@@ -1,6 +1,6 @@
 import { CreateMatrix } from "./grid";
 import { printMatrix } from "./grid";
-import { updateCell } from "./game";
+import { updateMatrix as updateMatrix } from "./game";
 
 const rows: number = parseInt(process.argv[2], 10);
 const columns: number = parseInt(process.argv[3], 10);
@@ -14,3 +14,7 @@ const matrix = CreateMatrix(rows, columns);
 
 // print matrix.
 printMatrix(matrix);
+updateMatrix(matrix);
+console.log("result");
+printMatrix(matrix);
+
