@@ -1,11 +1,14 @@
 {
     "compilerOptions": {
+        "moduleResolution": "node",
         "target": "es2015", // Or "es2016" or later
         "module": "commonjs",
         "strict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "jsx": "react"
     },
     "include": [
-        "src/**/*.ts"
+        "src/**/*.ts",
+        "src/App.tsx"
     ]
 }
