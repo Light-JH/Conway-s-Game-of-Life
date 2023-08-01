@@ -9,6 +9,10 @@ The universe of the Game of Life is an infinite, two-dimensional orthogonal grid
 4) Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 
-https://github.com/Light-JH/Conway-s-Game-of-Life/assets/68739569/24707931-e2af-4f1e-83c8-44d6d1fe52af
+
+
+https://github.com/Light-JH/Conway-s-Game-of-Life/assets/68739569/faa12c77-b4d6-448f-89ce-8081a5261834
+
+
 
 
