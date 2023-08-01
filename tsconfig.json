@@ -1,14 +1,26 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "target": "es2015", // Or "es2016" or later
-        "module": "commonjs",
-        "strict": true,
-        "esModuleInterop": true,
-        "jsx": "react"
-    },
-    "include": [
-        "src/**/*.ts",
-        "src/App.tsx"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }

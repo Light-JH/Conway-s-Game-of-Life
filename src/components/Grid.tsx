@@ -1,30 +1,42 @@
-import React from "react";
-
 interface Props {
     grid: number[][];
-    showGridLines: boolean;
     onClick: (i: number, j: number) => void;
 }
 
-export default function Grid({ grid, showGridLines, onClick }: Props) {
+export default function Grid({ grid, onClick }: Props) {
+    const gridStyle = {
+        display: "grid",
+    };
+
+    const rowStyle = {
+        display: "flex",
+    };
+
+    const cellStyle = {
+        width: "20px",
+        height: "20px",
+        backgroundColor: "white",
+        outline: "1px solid rgba(144, 175, 175, 0.75)",
+        display: "inline-block",
+        padding: 0,
+        marginBottom: "-3px",
+    };
+
     return (
-        <div
-            className={`mx-[2.5vw] mb-6 border-t-[1px] border-l-[1px] ${!showGridLines && 'border-r-[1px] border-b-[1px]'
-                }`}
-        >
-            {grid.map((row, i) => (
-                <div className='flex'>
-                    {row.map((cell, j) => (
-                        <div
-                            key={`${i},${j}`}
-                            onClick={() => onClick(i, j)}
-                            className={`w-full aspect-square
-            ${cell && 'bg-blue-300'}
-            ${showGridLines && 'border-b-[1px] border-r-[1px]'}`}
-                        />
-                    ))}
-                </div>
-            ))}
+        <div style={gridStyle}>
+            {
+                grid.map((row, i) => (
+                    <div style={rowStyle}>
+                        {
+                            row.map((cell, j) => (
+                                <div style={{ ...cellStyle, backgroundColor: cell ? "blue" : "white" }}
+                                    onClick={() => onClick(i, j)}>
+                                </div>
+                            ))
+                        }
+                    </div>
+                ))
+            }
         </div>
-    );
+    )
 }
